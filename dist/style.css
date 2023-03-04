@@ -14,16 +14,11 @@ body .header {
   grid-column: 1/3;
   grid-row: 1/2;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100%;
-  align-items: center;
-  justify-items: center;
+  align-self: center;
+  justify-self: center;
 }
 body .header h1 {
   grid-column: 2/3;
-}
-body .header .addTask {
-  grid-column: 3/4;
 }
 body .mainContent {
   grid-column: 2/3;
