@@ -31,7 +31,7 @@ main.addEventListener('click', (e) => {
   }
   // Delete Task
   if (e.target.classList.contains('task-delete')) {
-    e.target.parentNode.remove();
+    e.target.parentNode.parentNode.remove();
   }
 });
 
@@ -40,7 +40,6 @@ const taskModalName = document.querySelector('#taskName');
 const taskModalDescription = document.querySelector('#taskDescription');
 const taskModalDate = document.querySelector('#taskDate');
 const taskModalPriority = document.querySelector('#taskPriority');
-
 const taskModalAdd = document.querySelector('.taskModalAdd');
 const taskModalCancel = document.querySelector('.taskModalCancel');
 
@@ -66,7 +65,6 @@ taskModalCancel.addEventListener('click', () => {
 });
 
 // Edit TASK
-
 main.addEventListener('click', (e) => {
   if (e.target.classList.contains('task-edit')) {
     const taskEditForm = e.target.parentNode.nextElementSibling;
@@ -96,5 +94,50 @@ main.addEventListener('click', (e) => {
     taskEditDescription.value = '';
     taskEditDate.value = '2023-01-01';
     e.target.parentNode.style.display = 'none';
+  }
+});
+
+// Project Logic ----------------------------------------------------------------------
+
+const addProjectBtn = document.querySelector('.addProject');
+const projectModal = document.querySelector('.modal-project');
+addProjectBtn.addEventListener('click', () => {
+  projectModal.showModal();
+});
+
+const projectModalName = document.querySelector('#projectName');
+const projectModalColor = document.querySelector('#projectColor');
+const projectModalAdd = document.querySelector('.projectModalAdd');
+const projectModalCancel = document.querySelector('.projectModalCancel');
+const projectListNav = document.querySelector('.listProjects');
+const listProjects = [];
+projectModalAdd.addEventListener('click', () => {
+  const project = document.createElement('li');
+  project.classList.add('project');
+  project.setAttribute('id', projectModalName.value.replace(/\s+/g, ''));
+  const projectTitle = document.createElement('h4');
+  projectTitle.classList.add('project-title');
+  projectTitle.textContent = projectModalName.value;
+  const deleteProjectBtn = document.createElement('button');
+  deleteProjectBtn.classList.add('project-delete');
+  deleteProjectBtn.textContent = 'Delete';
+  const projectTab = tabCreation(`${projectModalName.value}`);
+  listProjects.push(projectTab);
+  project.appendChild(projectTitle);
+  project.appendChild(deleteProjectBtn);
+  projectListNav.appendChild(project);
+});
+
+projectListNav.addEventListener('click', (e) => {
+  if (e.target.classList.contains('project')) {
+    for (let i = 0; i < listProjects.length; i += 1) {
+      if (listProjects[i].name.replace(/\s+/g, '') === e.target.id) {
+        main.removeChild(main.lastChild);
+        main.appendChild(listProjects[i].content);
+      }
+    }
+  }
+  if (e.target.classList.contains('project-delete')) {
+    e.target.parentNode.remove();
   }
 });
