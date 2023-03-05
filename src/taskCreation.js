@@ -1,5 +1,5 @@
 export const taskCreation = (name, description, date, priority) => {
-  // Main content of task object'
+  // Main content of task object
   const listElement = document.createElement('li');
   listElement.classList.add('task');
   const taskContent = document.createElement('div');
@@ -30,22 +30,22 @@ export const taskCreation = (name, description, date, priority) => {
   taskEditForm.classList.add('task-edit-form');
   const taskEditName = document.createElement('input');
   taskEditName.setAttribute('type', 'text');
-  taskEditName.setAttribute('name', 'taskEditName');
-  taskEditName.setAttribute('id', 'taskEditName');
+  taskEditName.setAttribute('name', 'task-edit-name');
+  taskEditName.setAttribute('id', 'task-edit-name');
   taskEditName.setAttribute('placeholder', 'name');
   const taskEditDescription = document.createElement('input');
   taskEditDescription.setAttribute('type', 'text');
-  taskEditDescription.setAttribute('name', 'taskEditDescription');
-  taskEditDescription.setAttribute('id', 'taskEditDescription');
+  taskEditDescription.setAttribute('name', 'task-edit-description');
+  taskEditDescription.setAttribute('id', 'task-edit-description');
   taskEditDescription.setAttribute('placeholder', 'description');
   const taskEditDate = document.createElement('input');
   taskEditDate.setAttribute('type', 'date');
-  taskEditDate.setAttribute('name', 'taskEditDate');
-  taskEditDate.setAttribute('id', 'taskEditDate');
+  taskEditDate.setAttribute('name', 'task-edit-date');
+  taskEditDate.setAttribute('id', 'task-edit-date');
   taskEditDate.value = '2023-01-01';
   const taskEditPriority = document.createElement('select');
-  taskEditPriority.setAttribute('name', 'taskEditPriority');
-  taskEditPriority.setAttribute('id', 'taskEditPriority');
+  taskEditPriority.setAttribute('name', 'task-edit-priority');
+  taskEditPriority.setAttribute('id', 'task-edit-priority');
   const colorPriority = ['#2F58CD', '#03C988', '#FFED00', '#F99417', '#FF0303'];
   for (let i = 0; i < colorPriority.length; i += 1) {
     const option = document.createElement('option');

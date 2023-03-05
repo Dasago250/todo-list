@@ -6,7 +6,7 @@ export const tabCreation = (title) => {
   contentTitle.textContent = title;
   const name = title;
   const addTaskBtn = document.createElement('button');
-  addTaskBtn.classList.add('addTask');
+  addTaskBtn.classList.add('add-task');
   addTaskBtn.textContent = 'Add Task';
   const tabHeader = document.createElement('div');
   tabHeader.classList.add('tab-header');

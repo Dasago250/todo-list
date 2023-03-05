@@ -26,7 +26,7 @@ const taskModal = document.querySelector('.modal-task');
 // Logic of buttons in the main content
 main.addEventListener('click', (e) => {
   // Add task
-  if (e.target.classList.contains('addTask')) {
+  if (e.target.classList.contains('add-task')) {
     taskModal.showModal();
   }
   // Delete Task
@@ -37,12 +37,12 @@ main.addEventListener('click', (e) => {
 
 // TASK MODAL LOGIC -----------------------------------------------------------------------------
 // TASK MODAL
-const taskModalName = document.querySelector('#taskName');
-const taskModalDescription = document.querySelector('#taskDescription');
-const taskModalDate = document.querySelector('#taskDate');
-const taskModalPriority = document.querySelector('#taskPriority');
-const taskModalAdd = document.querySelector('.taskModalAdd');
-const taskModalCancel = document.querySelector('.taskModalCancel');
+const taskModalName = document.querySelector('#task-name');
+const taskModalDescription = document.querySelector('#task-description');
+const taskModalDate = document.querySelector('#task-date');
+const taskModalPriority = document.querySelector('#task-priority');
+const taskModalAdd = document.querySelector('.task-modal-add');
+const taskModalCancel = document.querySelector('.task-modal-cancel');
 
 // TASK MODAL CONFIRM BUTTON
 taskModalAdd.addEventListener('click', () => {
@@ -115,18 +115,18 @@ main.addEventListener('click', (e) => {
 // Project Logic ----------------------------------------------------------------------
 
 // OPEN PROJECT MODAL
-const addProjectBtn = document.querySelector('.addProject');
+const addProjectBtn = document.querySelector('.add-project');
 const projectModal = document.querySelector('.modal-project');
 addProjectBtn.addEventListener('click', () => {
   projectModal.showModal();
 });
 
 // PROJECT MODAL INFO
-const projectModalName = document.querySelector('#projectName');
-const projectModalColor = document.querySelector('#projectColor');
-const projectModalAdd = document.querySelector('.projectModalAdd');
-const projectModalCancel = document.querySelector('.projectModalCancel');
-const projectListNav = document.querySelector('.listProjects');
+const projectModalName = document.querySelector('#project-name');
+const projectModalColor = document.querySelector('#project-color');
+const projectModalAdd = document.querySelector('.project-modal-add');
+const projectModalCancel = document.querySelector('.project-modal-cancel');
+const projectListNav = document.querySelector('.list-projects');
 const listProjects = [];
 
 // PROJECT MODAL CONFIRM BUTTON

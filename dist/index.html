@@ -13,7 +13,7 @@
     <header class="header">
         <h1>ToDo List</h1>
     </header>
-    <nav class="sideMenu">
+    <nav class="side-menu">
         <div class="tab inbox">
             <h3>Inbox</h3>
         </div>
@@ -24,11 +24,11 @@
             <h3>Favorites</h3>
         </div>
         <div class="projects">
-            <header class="projectTabHeader">
+            <header class="project-tab-Header">
                 <h3>Projects</h3>
-                <button class="addProject">+</button>
+                <button class="add-project">+</button>
             </header>
-            <div class="listProjects"></div>
+            <div class="list-projects"></div>
         </div>
     </nav>
     <main class="mainContent">
@@ -37,20 +37,20 @@
         <h3>New Task</h3>
         <form method="dialog">
             <div class="task-modal-name container">
-                <label for="taskName">Name: </label>
-                <input type="text" name="taskName" id="taskName" placeholder="Name: ">
+                <label for="task-name">Name: </label>
+                <input type="text" name="task-name" id="task-name" placeholder="Name: ">
             </div>
             <div class="task-modal-description container">
-                <label for="taskDescription">Description: </label>
-                <input type="text" name="taskDescription" id="taskDescription" placeholder="Description">                
+                <label for="task-description">Description: </label>
+                <input type="text" name="task-description" id="task-description" placeholder="Description">                
             </div>
             <div class="task-modal-date container">
-                <label for="taskDate">Due Date: </label>
-                <input type="date" name="taskDate" id="taskDate">                
+                <label for="task-date">Due Date: </label>
+                <input type="date" name="task-date" id="task-date">                
             </div>
             <div class="task-modal-priority container">
-                <label for="taskPriority">Priority:</label>
-                <select name="taskPriority" id="taskPriority">
+                <label for="task-priority">Priority:</label>
+                <select name="task-priority" id="task-priority">
                     <option value="#2F58CD">1</option>
                     <option value="#03C988">2</option>
                     <option value="#FFED00">3</option>
@@ -59,8 +59,8 @@
                 </select>               
             </div>
             <div class="buttons">
-                <button class="taskModalAdd">Add</button>
-                <button class="taskModalCancel">Cancel</button>
+                <button class="task-modal-add">Add</button>
+                <button class="task-modal-cancel">Cancel</button>
             </div>
         </form>
     </dialog>
@@ -68,12 +68,12 @@
         <h3>New Project</h3>
         <form method="dialog">
             <div class="project-modal-name container">
-                <label for="projectName">Name: </label>
-                <input type="text" name="projectName" id="projectName" placeholder="Name: ">
+                <label for="project-name">Name: </label>
+                <input type="text" name="project-name" id="project-name" placeholder="Name: ">
             </div>
            <div class="project-modal-color container">
-                <label for="projectColor">Color: </label>
-                <select name="projectColor" id="projectColor">
+                <label for="project-color">Color: </label>
+                <select name="project-color" id="project-color">
                     <option value="#865DFF">1</option>
                     <option value="#FFB84C">2</option>
                     <option value="#537FE7">3</option>
@@ -82,8 +82,8 @@
                 </select>            
            </div>
             <div class="buttons">
-                <button class="projectModalAdd">Add</button>
-                <button class="projectModalCancel">Cancel</button>
+                <button class="project-modal-add">Add</button>
+                <button class="project-modal-cancel">Cancel</button>
             </div>
         </form>
     </dialog>

@@ -16,7 +16,7 @@
   color: #FFE1A8;
 }
 
-.sideMenu {
+.side-menu {
   background-color: #E26D5C;
   grid-column: 1/2;
   grid-row: 2/3;
@@ -28,20 +28,20 @@
   color: #472D30;
   font-size: 20px;
 }
-.sideMenu .tab {
+.side-menu .tab {
   padding-left: 20px;
   height: 100%;
   display: flex;
   align-items: center;
 }
-.sideMenu .tab h3 {
+.side-menu .tab h3 {
   margin: 0;
 }
-.sideMenu .tab:hover {
+.side-menu .tab:hover {
   background-color: #C9CBA3;
   color: #723D46;
 }
-.sideMenu .projects {
+.side-menu .projects {
   padding-top: 20px;
   padding-left: 20px;
   grid-row: 4/5;
@@ -50,15 +50,15 @@
   grid-template-columns: 100%;
   grid-template-rows: 10% auto;
 }
-.sideMenu .projects .projectTabHeader {
+.side-menu .projects .project-tab-Header {
   display: flex;
   align-items: center;
   gap: 30px;
 }
-.sideMenu .projects .projectTabHeader h3 {
+.side-menu .projects .project-tab-Header h3 {
   margin: 0;
 }
-.sideMenu .projects .projectTabHeader .addProject {
+.side-menu .projects .project-tab-Header .add-project {
   background-color: #472D30;
   color: #C9CBA3;
   height: 35px;
@@ -67,14 +67,14 @@
   border-radius: 25px;
   font-size: 30px;
 }
-.sideMenu .projects .projectTabHeader .addProject:hover {
+.side-menu .projects .project-tab-Header .add-project:hover {
   background-color: #F1A782;
   color: #472D30;
 }
-.sideMenu .projects .projectTabHeader .addProject:active {
+.side-menu .projects .project-tab-Header .add-project:active {
   background-color: #AA5551;
 }
-.sideMenu .projects .listProjects {
+.side-menu .projects .list-projects {
   list-style-type: none;
   padding: 0;
   display: grid;
@@ -83,7 +83,7 @@
   overflow-y: auto;
   direction: rtl;
 }
-.sideMenu .projects .listProjects .project {
+.side-menu .projects .list-projects .project {
   max-width: 200px;
   display: flex;
   align-items: center;
@@ -91,12 +91,12 @@
   padding-left: 10px;
   direction: ltr;
 }
-.sideMenu .projects .listProjects .project .color {
+.side-menu .projects .list-projects .project .color {
   width: 17px;
   height: 17px;
   border-radius: 50%;
 }
-.sideMenu .projects .listProjects .project .project-title {
+.side-menu .projects .list-projects .project .project-title {
   margin: 0;
   word-wrap: break-word;
   font-size: 17px;
@@ -104,10 +104,10 @@
   text-align: center;
   user-select: none;
 }
-.sideMenu .projects .listProjects .project .project-delete {
+.side-menu .projects .list-projects .project .project-delete {
   color: #472D30;
 }
-.sideMenu .projects .listProjects .project:hover {
+.side-menu .projects .list-projects .project:hover {
   background-color: #FFE1A8;
   color: #472D30;
   border-top-left-radius: 50px;
@@ -165,7 +165,7 @@
   font-size: 35px;
   text-align: center;
 }
-.mainContent .tab-content .tab-header .addTask {
+.mainContent .tab-content .tab-header .add-task {
   grid-column: 3/4;
   background-color: #472D30;
   color: #FFE1A8;
@@ -175,7 +175,7 @@
   height: 35px;
   border: none;
 }
-.mainContent .tab-content .tab-header .addTask:hover {
+.mainContent .tab-content .tab-header .add-task:hover {
   background-color: #E26D5C;
 }
 .mainContent .tab-content .task-list {
@@ -283,16 +283,16 @@
   padding: 5px 15px;
   border-radius: 5px;
 }
-.modal-task[open] form .buttons .taskModalAdd {
+.modal-task[open] form .buttons .task-modal-add {
   background-color: #C9CBA3;
 }
-.modal-task[open] form .buttons .taskModalAdd:hover {
+.modal-task[open] form .buttons .task-modal-add:hover {
   background-color: #E4D6A6;
 }
-.modal-task[open] form .buttons .taskModalCancel {
+.modal-task[open] form .buttons .task-modal-cancel {
   background-color: #AA5551;
 }
-.modal-task[open] form .buttons .taskModalCancel:hover {
+.modal-task[open] form .buttons .task-modal-cancel:hover {
   background-color: #E26D5C;
 }
 
@@ -345,16 +345,16 @@
   padding: 5px 15px;
   border-radius: 5px;
 }
-.modal-project[open] form .buttons .projectModalAdd {
+.modal-project[open] form .buttons .project-modal-add {
   background-color: #C9CBA3;
 }
-.modal-project[open] form .buttons .projectModalAdd:hover {
+.modal-project[open] form .buttons .project-modal-add:hover {
   background-color: #E4D6A6;
 }
-.modal-project[open] form .buttons .projectModalCancel {
+.modal-project[open] form .buttons .project-modal-cancel {
   background-color: #AA5551;
 }
-.modal-project[open] form .buttons .projectModalCancel:hover {
+.modal-project[open] form .buttons .project-modal-cancel:hover {
   background-color: #E26D5C;
 }
 
