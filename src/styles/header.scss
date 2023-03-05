@@ -1,0 +1,17 @@
+@use './fonts.scss';
+.header{
+  background-color: #472D30;
+  width: 100%;
+  height: 100%;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  display: grid;
+  align-items: center;
+  h1{
+      margin: 0;
+      grid-column: 2 / 3;
+      font-family: 'Righteous', cursive;
+      font-size: 45px;
+      color: #FFE1A8;
+  }
+}

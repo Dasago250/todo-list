@@ -14,16 +14,20 @@ export const taskCreation = (name, description, date, priority) => {
   taskDate.classList.add('task-date');
   taskDate.textContent = date;
   taskContent.style.backgroundColor = `${priority}`;
-  const taskEdit = document.createElement('button');
-  taskEdit.classList.add('task-edit');
-  taskEdit.textContent = 'edit';
-  const taskDelete = document.createElement('button');
-  taskDelete.classList.add('task-delete');
-  taskDelete.textContent = 'delete';
+  const buttons = document.createElement('div');
+  buttons.classList.add('buttons');
+  const taskEdit = document.createElement('i');
+  taskEdit.classList.add('task-edit', 'fa-solid', 'fa-pen-to-square');
+  const taskDelete = document.createElement('i');
+  taskDelete.classList.add('task-delete', 'fa-solid', 'fa-trash-can');
+  buttons.appendChild(taskEdit);
+  buttons.appendChild(taskDelete);
 
   // Edit task FORM ---------------------------------------------------
   const taskEditContent = document.createElement('div');
   taskEditContent.classList.add('task-edit-content');
+  const taskEditForm = document.createElement('div');
+  taskEditForm.classList.add('task-edit-form');
   const taskEditName = document.createElement('input');
   taskEditName.setAttribute('type', 'text');
   taskEditName.setAttribute('name', 'taskEditName');
@@ -52,23 +56,26 @@ export const taskCreation = (name, description, date, priority) => {
   const taskEditAdd = document.createElement('button');
   taskEditAdd.classList.add('task-edit-confirm');
   taskEditAdd.textContent = 'confirm';
-  const taskEditDelete = document.createElement('button');
-  taskEditDelete.classList.add('task-edit-cancel');
-  taskEditDelete.textContent = 'cancel';
+  const taskEditCancel = document.createElement('button');
+  taskEditCancel.classList.add('task-edit-cancel');
+  taskEditCancel.textContent = 'cancel';
+  const taskEditButtons = document.createElement('div');
+  taskEditButtons.classList.add('task-edit-buttons');
+  taskEditButtons.appendChild(taskEditAdd);
+  taskEditButtons.appendChild(taskEditCancel);
 
-  taskEditContent.appendChild(taskEditName);
-  taskEditContent.appendChild(taskEditDescription);
-  taskEditContent.appendChild(taskEditDate);
-  taskEditContent.appendChild(taskEditPriority);
-  taskEditContent.appendChild(taskEditAdd);
-  taskEditContent.appendChild(taskEditDelete);
+  taskEditForm.appendChild(taskEditName);
+  taskEditForm.appendChild(taskEditDescription);
+  taskEditForm.appendChild(taskEditDate);
+  taskEditForm.appendChild(taskEditPriority);
+  taskEditForm.appendChild(taskEditButtons);
+  taskEditContent.appendChild(taskEditForm);
 
   // Append all elements to li root element --------------------------------
   taskContent.appendChild(taskName);
   taskContent.appendChild(taskDescription);
   taskContent.appendChild(taskDate);
-  taskContent.appendChild(taskEdit);
-  taskContent.appendChild(taskDelete);
+  taskContent.appendChild(buttons);
 
   listElement.appendChild(taskContent);
   listElement.appendChild(taskEditContent);

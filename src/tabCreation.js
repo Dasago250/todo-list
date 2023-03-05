@@ -8,10 +8,13 @@ export const tabCreation = (title) => {
   const addTaskBtn = document.createElement('button');
   addTaskBtn.classList.add('addTask');
   addTaskBtn.textContent = 'Add Task';
+  const tabHeader = document.createElement('div');
+  tabHeader.classList.add('tab-header');
+  tabHeader.appendChild(contentTitle);
+  tabHeader.appendChild(addTaskBtn);
   const taskList = document.createElement('ul');
   taskList.classList.add('task-list');
-  content.appendChild(contentTitle);
-  content.appendChild(addTaskBtn);
+  content.appendChild(tabHeader);
   content.appendChild(taskList);
 
   return { content, taskList, name };

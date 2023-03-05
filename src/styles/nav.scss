@@ -1,0 +1,120 @@
+@use './fonts.scss';
+.sideMenu{
+  background-color: #E26D5C;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 10% 10% auto;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  color: #472D30;
+  font-size: 20px;
+  .tab{
+    padding-left: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    h3{
+      margin: 0;
+    }
+    &:hover{
+      background-color: #C9CBA3;
+      color: #723D46;
+    }
+  }
+  .projects{
+    padding-top: 20px;
+    padding-left: 20px;
+    grid-row: 4 / 5;
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% auto;
+    .projectTabHeader{
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      h3{
+        margin: 0;
+      }
+      .addProject{
+        background-color: #472D30;
+        color: #C9CBA3;
+        height: 35px;
+        width: 70px;
+        border: none;
+        border-radius: 25px;
+        font-size: 30px;
+        &:hover{
+          background-color: #F1A782;
+          color:#472D30;
+        }
+        &:active{
+          background-color: #AA5551;
+        }
+      }      
+    }
+    .listProjects{
+      list-style-type: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-auto-rows: 15%;
+      overflow-y: auto;
+      direction: rtl;
+      .project{
+        max-width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-left: 10px;
+        direction: ltr;
+        .color{
+          width: 17px;
+          height: 17px;
+          border-radius: 50%;
+        }
+        .project-title{
+          margin: 0;
+          word-wrap: break-word;
+          font-size: 17px;
+          max-width: 100px;
+          text-align: center;
+          user-select: none;
+        }
+        .project-delete{
+          color: #472D30;
+        }
+        &:hover{
+          background-color: #FFE1A8;
+          color:#472D30;
+          border-top-left-radius: 50px;
+          border-bottom-left-radius: 50px;
+        }
+      }
+    }
+  }
+}
+
+  /* Designing for scroll-bar */
+  ::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #F1A782;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #472D30;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

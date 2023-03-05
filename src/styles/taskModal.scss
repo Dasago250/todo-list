@@ -1,0 +1,66 @@
+.modal-task{
+  &[open]{
+    height: 400px;
+    width: 300px;
+    background-color: #F1A782;
+    border: 5px solid #472D30;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 15% auto;
+    border-radius: 20px;
+    h3{
+      align-self: center;
+      justify-self: center;
+    }
+    form{
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(5, 1fr);
+      align-items: center;
+      .container{
+        input{
+          background-color: #FFE1A8;
+          border: none;
+          border-radius: 5px;
+          padding: 5px;
+          &:focus{
+            border: 3px solid #472D30;
+          }
+        }
+        select{
+          background-color: #FFE1A8;
+          width: 100px;
+          border: none;
+          border-radius: 5px;
+          padding: 5px;
+          &:focus{
+            border: 3px solid #472D30;
+          }
+        }
+      }
+      .buttons{
+        justify-self: center;
+        display: flex;
+        gap: 20px;
+        button{
+          border: none;
+          padding: 5px 15px;
+          border-radius: 5px;
+        }
+        .taskModalAdd{
+          background-color: #C9CBA3;
+          &:hover{
+            background-color: #E4D6A6;
+          }
+        }
+        .taskModalCancel{
+          background-color: #AA5551;
+          &:hover{
+            background-color: #E26D5C;
+          }
+        }
+      }
+    }
+  }
+
+}

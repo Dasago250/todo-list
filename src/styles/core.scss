@@ -1,3 +1,8 @@
+@use './header.scss';
+@use './nav.scss';
+@use './main.scss';
+@use './taskModal.scss';
+@use './projectModal.scss';
 *{
     box-sizing: border-box;
 }
@@ -5,40 +10,8 @@ body{
     margin: 0;
     max-width: 100vw;
     min-height: 100vh;
+    max-height: 100%;
     display: grid;
-    grid-template-columns: 15% 85%;
+    grid-template-columns: minmax(220px, 280px) auto;
     grid-template-rows: 10% 90%;
-    .header{
-        grid-column: 1 / 3;
-        grid-row: 1 / 2;
-        display: grid;
-        align-self: center;
-        justify-self: center;
-        h1{
-            grid-column: 2 / 3;
-        }
-    }
-    .mainContent{
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
-        .tab-content{
-            .task-list{
-                .task{
-                    .task-edit-content{
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-    .sideMenu{
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-        .projects{
-            .projectTabHeader{
-                display: flex;
-                gap: 15px;
-            }
-        }
-    }
 }

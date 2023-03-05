@@ -1,0 +1,65 @@
+.modal-project{
+  &[open]{
+    height: 300px;
+    width: 300px;
+    background-color: #F1A782;
+    border: 5px solid #472D30;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 30% auto;
+    border-radius: 20px;
+    h3{
+      align-self: center;
+      justify-self: center;
+    }
+    form{
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(3, 1fr);
+      align-items: center;
+      .container{
+        input{
+          background-color: #FFE1A8;
+          border: none;
+          border-radius: 5px;
+          padding: 5px;
+          &:focus{
+            border: 3px solid #472D30;
+          }
+        }
+        select{
+          background-color: #FFE1A8;
+          width: 160px;
+          border: none;
+          border-radius: 5px;
+          padding: 5px;
+          &:focus{
+            border: 3px solid #472D30;
+          }
+        }
+      }
+      .buttons{
+        justify-self: center;
+        display: flex;
+        gap: 20px;
+        button{
+          border: none;
+          padding: 5px 15px;
+          border-radius: 5px;
+        }
+        .projectModalAdd{
+          background-color: #C9CBA3;
+          &:hover{
+            background-color: #E4D6A6;
+          }
+        }
+        .projectModalCancel{
+          background-color: #AA5551;
+          &:hover{
+            background-color: #E26D5C;
+          }
+        }
+      }
+    }
+  }
+}

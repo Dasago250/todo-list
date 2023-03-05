@@ -1,0 +1,100 @@
+@use './fonts.scss';
+.mainContent{
+  background-color: #FFE1A8;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: grid;
+  padding: 50px;
+  .tab-content{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
+    height: 747.797px;
+    background-color: #FFFFFF;
+    .tab-header{
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1;   
+      align-items: center;
+      justify-items: center;
+      .tab-title{
+        margin: 0;
+        grid-column: 2 / 3;
+        font-size: 35px;
+        text-align: center;
+      }
+      .addTask{
+        grid-column: 3 / 4;
+        background-color: #472D30;
+        color: #FFE1A8;
+        font-size: 18px;
+        border-radius: 50px;
+        width: 100px;
+        height: 35px;
+        border: none;
+        &:hover{
+          background-color: #E26D5C;
+        }
+      }      
+    }
+    .task-list{
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+      list-style-type: none;
+      padding: 0 50px;
+      overflow-y: auto;
+        .task{
+          border: 1px solid #472D30;
+          margin-bottom: 15px;
+          .task-content{
+            min-height: 100px;
+            display: grid;
+            grid-template-columns: 5% 25% 25% 25% 20%;
+            grid-template-rows: 100%;
+            align-items: center;
+            justify-items: center;
+            font-size: 20px;
+            .task-name{
+              grid-column: 2 / 3;
+            }
+            .buttons{
+              display: flex;
+              gap: 50px;
+              font-size: 30px;
+              .task-edit{
+                &:hover{
+                  color: #FFE1A8
+                }
+              }
+            }
+          }
+          .task-edit-content{
+              display: none;
+              height: 30px;
+              .task-edit-form{
+                height: 30px;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: auto;
+                .task-edit-buttons{
+                  align-self: center;
+                  justify-self: center;
+                  display: flex;
+                  gap: 20px;
+                  .task-edit-confirm{
+                    background-color: #C9CBA3;
+                    border-radius: 50px;
+                  }
+                  .task-edit-cancel{
+                    background-color: #E26D5C;
+                    border-radius: 50px;
+                  }
+                }
+              }
+          }
+        }
+    }
+  }
+}

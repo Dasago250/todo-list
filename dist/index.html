@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <script defer src="./main.js"></script>
+    <script defer src="https://kit.fontawesome.com/29db35f920.js" crossorigin="anonymous"></script>
     <title>ToDo List</title>
 </head>
 <body>
@@ -19,15 +20,15 @@
         <div class="tab today">
             <h3>Today</h3>
         </div>
-        <div class="tab projectTest">
-            <h3>Project Test</h3>
+        <div class="tab favorites">
+            <h3>Favorites</h3>
         </div>
-        <div class="tab projects">
+        <div class="projects">
             <header class="projectTabHeader">
                 <h3>Projects</h3>
-                <button class="addProject">New project</button>
+                <button class="addProject">+</button>
             </header>
-            <ul class="listProjects"></ul>
+            <div class="listProjects"></div>
         </div>
     </nav>
     <main class="mainContent">
@@ -35,17 +36,29 @@
     <dialog class="modal-task">
         <h3>New Task</h3>
         <form method="dialog">
-            <input type="text" name="taskName" id="taskName" placeholder="Name: ">
-            <input type="text" name="taskDescription" id="taskDescription" placeholder="Description">
-            <input type="date" name="taskDate" id="taskDate">
-            <select name="taskPriority" id="taskPriority">
-                <option value="#2F58CD">1</option>
-                <option value="#03C988">2</option>
-                <option value="#FFED00">3</option>
-                <option value="#F99417">4</option>
-                <option value="#FF0303">5</option>
-            </select>
-            <div class="button">
+            <div class="task-modal-name container">
+                <label for="taskName">Name: </label>
+                <input type="text" name="taskName" id="taskName" placeholder="Name: ">
+            </div>
+            <div class="task-modal-description container">
+                <label for="taskDescription">Description: </label>
+                <input type="text" name="taskDescription" id="taskDescription" placeholder="Description">                
+            </div>
+            <div class="task-modal-date container">
+                <label for="taskDate">Due Date: </label>
+                <input type="date" name="taskDate" id="taskDate">                
+            </div>
+            <div class="task-modal-priority container">
+                <label for="taskPriority">Priority:</label>
+                <select name="taskPriority" id="taskPriority">
+                    <option value="#2F58CD">1</option>
+                    <option value="#03C988">2</option>
+                    <option value="#FFED00">3</option>
+                    <option value="#F99417">4</option>
+                    <option value="#FF0303">5</option>
+                </select>               
+            </div>
+            <div class="buttons">
                 <button class="taskModalAdd">Add</button>
                 <button class="taskModalCancel">Cancel</button>
             </div>
@@ -54,14 +67,20 @@
     <dialog class="modal-project">
         <h3>New Project</h3>
         <form method="dialog">
-            <input type="text" name="projectName" id="projectName" placeholder="Name: ">
-            <select name="projectColor" id="projectColor">
-                <option value="#865DFF">1</option>
-                <option value="#FFB84C">2</option>
-                <option value="#537FE7">3</option>
-                <option value="#40513B">4</option>
-                <option value="#D61355">5</option>
-            </select>
+            <div class="project-modal-name container">
+                <label for="projectName">Name: </label>
+                <input type="text" name="projectName" id="projectName" placeholder="Name: ">
+            </div>
+           <div class="project-modal-color container">
+                <label for="projectColor">Color: </label>
+                <select name="projectColor" id="projectColor">
+                    <option value="#865DFF">1</option>
+                    <option value="#FFB84C">2</option>
+                    <option value="#537FE7">3</option>
+                    <option value="#40513B">4</option>
+                    <option value="#D61355">5</option>
+                </select>            
+           </div>
             <div class="buttons">
                 <button class="projectModalAdd">Add</button>
                 <button class="projectModalCancel">Cancel</button>
