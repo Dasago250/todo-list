@@ -21,6 +21,15 @@ body{
     .mainContent{
         grid-column: 2 / 3;
         grid-row: 2 / 3;
+        .tab-content{
+            .task-list{
+                .task{
+                    .task-edit-content{
+                        display: none;
+                    }
+                }
+            }
+        }
     }
     .sideMenu{
         grid-column: 1 / 2;
